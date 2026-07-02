@@ -1,3 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Atribuindo em todos os elementos*/
 *{
-    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
 }
+
+/* Criando variaveis */
+:root{
+    --cor_principal: #d4cb4c;
+    --cor_botao01: #c94e4e;
+    --cor_lnk_menu: #392dda;
+    --cor_vermelha: #cf3737;
+}
+
+/* Configurando a tag main*/
+#geral{
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Configurando o cabeçalho da pagina*/
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor_principal);
+    padding: 5px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Alterando o tamanho da imagem logo*/
+#cabecalho log-img{
+    width: 250px;
+    height: 160px;
+}
+
+/*Configurando a tag nav por meio do seu id*/
+#menu{
+    width: 600px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Configurando os li do ul do cabeçalho na horizontal*/
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/*Configurando os tamanhos dos icones*/
+#div-icones img{
+    width: 70px;
+    height: 60px;
+}
+
+/*Formatando os links dos menus*/
+#menu a:link{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu)
+}
+
+#menu a:hover{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_botao01)
+}
+
+#menu a:active{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_vermelha)
+}
+
+/*formatando section pelo id pesquisa*/
+#pesquisa{
+    background-color: aliceblue;
+    width: 1000px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pesquisa input{
+    width: 6%;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+}
+
