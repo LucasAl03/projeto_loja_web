@@ -11,16 +11,19 @@
 
 /* Criando variaveis */
 :root{
-    --cor_principal: #d4cb4c;
+    --cor_principal: #dfd662;
     --cor_botao01: #c94e4e;
-    --cor_lnk_menu: #392dda;
+    --cor_lnk_menu: #3665e6;
     --cor_vermelha: #cf3737;
+    --cor_suave: #cc6f6f;
+    --cor_card: #6f82db;
 }
 
 /* Configurando a tag main*/
 #geral{
     margin: 20px;
     padding: 20px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,14 +42,14 @@
 }
 
 /*Alterando o tamanho da imagem logo*/
-#cabecalho log-img{
+#logo img{
     width: 250px;
     height: 160px;
 }
 
 /*Configurando a tag nav por meio do seu id*/
 #menu{
-    width: 600px;
+    width: 750px;
     height: 160px;
     display: flex;
     align-items: center;
@@ -57,12 +60,12 @@
 #cabecalho ul{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
 }
 
 /*Configurando os tamanhos dos icones*/
 #div-icones img{
-    width: 70px;
+    width: 60px;
     height: 60px;
 }
 
@@ -72,6 +75,13 @@
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_lnk_menu)
+}
+
+#menu a:visited{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
 }
 
 #menu a:hover{
@@ -99,10 +109,65 @@
 }
 
 #pesquisa input{
-    width: 6%;
+    width: 600px;
     height: 80px;
     padding: 20px;
     border-radius: 8px;
     font-size: 2em;
 }
 
+/*Formatação dos cards*/
+#cards{
+    background-color: var(--cor_card);
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
+    /*display: grid - trata os elementos como uma tabela*/
+    display: grid;
+    /*como as colunas serão distribuidas*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    width: 250px;
+    min-height: 250px;
+    border: solid 1px var(--cor_principal);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.car:hover{
+    transform: translateX(-5px);
+}
+
+.card h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 10px 0px;
+}
+
+.card h3{
+    margin: 20px 0px;
+}
+
+.card button{
+    width: 100%;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: none;
+    background-color: var(--cor_suave);
+    color: #d4cb4c;
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+}
+
+/*Formatação do Rodapé*/
