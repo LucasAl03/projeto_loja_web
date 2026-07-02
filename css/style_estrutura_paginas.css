@@ -100,9 +100,9 @@
 
 /*formatando section pelo id pesquisa*/
 #pesquisa{
-    background-color: aliceblue;
-    width: 1000px;
-    height: 180px;
+    background-color: var(--cor_principal);
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +110,7 @@
 
 #pesquisa input{
     width: 600px;
-    height: 80px;
+    height: 50px;
     padding: 20px;
     border-radius: 8px;
     font-size: 2em;
@@ -118,8 +118,8 @@
 
 /*Formatação dos cards*/
 #cards{
-    background-color: var(--cor_card);
-    width: 1000px;
+    background-color: var(--cor_principal);
+    width: 935px;
     min-height: 600px;
     margin: 20px 0px;
     padding: 10px;
@@ -128,12 +128,13 @@
     /*como as colunas serão distribuidas*/
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    cursor: pointer;
 }
 
 .card{
     width: 250px;
     min-height: 250px;
-    border: solid 1px var(--cor_principal);
+    border: solid 1px var(--cor_botao01);
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -141,8 +142,8 @@
     justify-content: center;
 }
 
-.car:hover{
-    transform: translateX(-5px);
+.card:hover{
+    transform: translateY(-5px);
 }
 
 .card h2{
@@ -166,8 +167,36 @@
 }
 
 .card img{
-    width: 100%;
-    height: 150px;
+    width: auto;
+    height: auto;
+    padding-bottom: 30px;
 }
 
 /*Formatação do Rodapé*/
+#rodape{
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor_principal);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#dadosloja{
+    font-size: 0.8em;
+}
+
+#icones-sociais ul{
+    list-style: none;
+}
+
+#icones-sociais img{
+    width: 25px;
+    height: 25px;
+    margin-left: 50px;
+}
+
+#div-cartoes img{
+    width: 50px;
+    height: 50px;
+}
