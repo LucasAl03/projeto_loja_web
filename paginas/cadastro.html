@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
 
+    <link rel="stylesheet" href="../css/style_formulario.css">
 </head>
 <body>
     <!-- main# para id e main. para class -->
@@ -16,24 +17,24 @@
         <header id="cabecalho">
             <div id="logo">
                 <!-- link para pagina usando imagem  -->
-                <a href="index.html">
-                    <img src="icones/logo.png" alt="logo">
+                <a href="../index.html">
+                    <img src="../icones/logo.png" alt="logo">
                 </a>
             </div>
 
             <nav id="menu">
                 <!-- ul para menus com submenu -->
                 <ul>
-                    <li><a href="index.html" class="lnk_menu"> Home </a></li>
-                    <li><a href="paginas/cadastro.html" class="lnk_menu"> Cadastro </a></li>
-                    <li><a href="paginas/sobre.html" class="lnk_menu"> Sobre </a></li>
+                    <li><a href="../index.html" class="lnk_menu"> Home </a></li>
+                    <li><a href="../paginas/cadastro.html" class="lnk_menu"> Cadastro </a></li>
+                    <li><a href="../paginas/sobre.html" class="lnk_menu"> Sobre </a></li>
                 </ul>
             </nav>
 
             <div id="div-icones">
                 <ul>
-                    <li><a href="/paginas/login.html" class="link_icone"><img src="icones/login.png" alt=""></a></li>
-                    <li><a href="/paginas/carrinho.html" class="link_icone"><img src="icones/carrinho.png" alt=""></a></li>
+                    <li><a href="../paginas/login.html" class="link_icone"><img src="../icones/login.png" alt=""></a></li>
+                    <li><a href="../paginas/carrinho.html" class="link_icone"><img src="../icones/carrinho.png" alt=""></a></li>
                 </ul>
             </div>
         </header>
@@ -68,10 +69,10 @@
                     <input type="text" name="logradouro" id="logradouro" class="input01">
 
                     <label for="num-residencia">Número</label>
-                    <input type="text" name="num-residencia" id="num-residencia" class="input01">
+                    <input type="text" name="num-residencia" id="num-residencia" class="input02" maxlength="10" placeholder="Digite o número da residência" required>
 
                     <label for="complemento-end">Complemento</label>
-                    <input type="text" name="complemento-end" id="complemento-end" class="input01">
+                    <input type="text" name="complemento-end" id="complemento-end" class="input01" maxlength="100" placeholder="Digite o complemento">
 
                     <label for="bairro">Bairro</label>
                     <input type="text" name="bairro" id="bairro" class="input01">
@@ -86,9 +87,12 @@
 
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha" class="input02" required maxlength="6" placeholder="Informe sua senha">
+                
 
-                <button type="submit" id="btn-add">Cadastrar</button>
-                <button type="reset" id="btn-limpar">Limpar</button>
+                <div id="div-btns">
+                    <button type="submit" id="btn-add">Cadastrar</button>
+                    <button type="reset" id="btn-limpar">Limpar</button>   
+                </div>
                 
             </form>
         </section>
@@ -102,15 +106,15 @@
 
             <div id="icones-sociais">
                 <ul>
-                    <li><a href="https://wwww.instagram.com/seu_usuario"><img src="icones/instagram.png" alt=""></a></li>
-                    <li><a href="https://wwww.facebook.com/seu_usuario"><img src="icones/facebook.png" alt=""></a></li>
+                    <li><a href="https://wwww.instagram.com/seu_usuario"><img src="../icones/instagram.png" alt=""></a></li>
+                    <li><a href="https://wwww.facebook.com/seu_usuario"><img src="../icones/facebook.png" alt=""></a></li>
                 </ul>
             </div>
 
             <div id="div-cartoes">
-                <img src="icones/hipercard.png" alt="Hipercard">
-                <img src="icones/visa.png" alt="Visa">
-                <img src="icones/master_card.png" alt="Mastercard">
+                <img src="../icones/hipercard.png" alt="Hipercard">
+                <img src="../icones/visa.png" alt="Visa">
+                <img src="../icones/master_card.png" alt="Mastercard">
             </div>
         </footer>
 
