@@ -7,6 +7,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Roboto;
+    background-color: var(--cor_principal);
 }
 
 /* Criando variaveis */
@@ -21,6 +22,7 @@
 
 /* Configurando a tag main*/
 #geral{
+    background-color: ;
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -184,6 +186,7 @@
 
 #dadosloja{
     font-size: 0.8em;
+    display: inline;
 }
 
 #icones-sociais ul{
