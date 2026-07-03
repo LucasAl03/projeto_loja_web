@@ -1,0 +1,30 @@
+@import url(style_estrutura_paginas.css);
+
+#quemsomos, .titulo{
+    font-size: 1.3em;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor_suave);
+    border: 1px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+#texto{
+    
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding: 10px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    background-color: var(--cor_suave);
+    border-radius: 8px;
+}
+
+.paragrafo{
+    padding: 10px;
+    background-color: var(--cor_suave);
+}
