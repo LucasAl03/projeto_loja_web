@@ -7,7 +7,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Roboto;
-    background-color: var(--cor_principal);
 }
 
 /* Criando variaveis */
@@ -101,7 +100,6 @@
 
 /*formatando section pelo id pesquisa*/
 #pesquisa{
-    background-color: var(--cor_principal);
     width: 100%;
     height: 70px;
     display: flex;
