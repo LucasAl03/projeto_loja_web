@@ -1,0 +1,67 @@
+@import url(style_estrutura_paginas.css);
+
+
+
+/*formatação para o titulo*/
+#carrinho, .titulo{
+    font-size: 1.3em;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor_suave);
+    border: 1px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/*foramatação dos cards nos carrinhos*/
+#cards-compra{
+    background-color: #ffffff;
+    width: 650px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
+    display: block;
+    margin: 50px;
+    
+}
+
+#card-compra{
+    display: block;
+}
+
+#card-compra input{
+    width: 30px;
+    height: 20px;
+}
+
+#card-compra button{
+    width: 30px;
+    height: 25px;
+    border-radius: 50px;
+    display: flex;
+}
+
+/*formatação do input cep, valor total frete e total a pagar*/
+#compra-cep-cont{
+    min-height: 600px;
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valor-card{
+    padding: 29px;
+}
+
+.btn-val{
+    height: 30px;
+    width: 140px;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+}
