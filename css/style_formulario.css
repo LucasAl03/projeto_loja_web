@@ -24,6 +24,7 @@ label{
     border-bottom: 1px solid var(--cor_principal);
     font-size: 1.3em;
     padding: 5px;
+    background-color: #ffffff;
 }
 
 .input01{
@@ -51,4 +52,8 @@ label{
     cursor: pointer;
     font-size: 0.8em;
     letter-spacing: 5px;
+}
+
+.oculto{
+    display: none;
 }
