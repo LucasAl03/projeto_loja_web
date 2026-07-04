@@ -145,6 +145,11 @@
     transform: translateY(-5px);
 }
 
+#button:hover{
+    color: var(--cor_botao01);
+    transform: translateY(-5px);
+}
+
 .card h2{
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -163,6 +168,7 @@
     border: none;
     background-color: var(--cor_suave);
     color: #d4cb4c;
+    cursor: pointer;
 }
 
 .card img{
