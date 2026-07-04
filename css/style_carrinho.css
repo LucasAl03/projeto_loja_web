@@ -1,6 +1,91 @@
-@import url(style_estrutura_paginas.css);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
 
+:root{
+    --cor_principal: #dfd662;
+    --cor_botao01: #c94e4e;
+    --cor_lnk_menu: #3665e6;
+    --cor_vermelha: #cf3737;
+    --cor_suave: #cc6f6f;
+    --cor_card: #6f82db;
+}
 
+#geral{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cabecalho{
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor_principal);
+    padding: 5px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img{
+    width: 250px;
+    height: 160px;
+}
+
+#menu{
+    width: 750px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+#div-icones img{
+    width: 60px;
+    height: 60px;
+}
+
+/*Formatando os links dos menus*/
+#menu a:link{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu)
+}
+
+#menu a:visited{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+}
+
+#menu a:hover{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_botao01)
+}
+
+#menu a:active{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_vermelha)
+}
 
 /*formatação para o titulo*/
 #carrinho, .titulo{
@@ -17,51 +102,188 @@
 }
 
 /*foramatação dos cards nos carrinhos*/
+
+.sections-coluna{
+    display: flex;
+}
+
 #cards-compra{
-    background-color: #ffffff;
-    width: 650px;
-    min-height: 600px;
-    margin: 20px 0px;
-    padding: 10px;
-    display: block;
-    margin: 50px;
-    
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 #card-compra{
-    display: block;
-}
-
-#card-compra input{
-    width: 30px;
-    height: 20px;
-}
-
-#card-compra button{
-    width: 30px;
-    height: 25px;
-    border-radius: 50px;
-    display: flex;
-}
-
-/*formatação do input cep, valor total frete e total a pagar*/
-#compra-cep-cont{
-    min-height: 600px;
-    width: 300px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 90px 120px 50px;
     align-items: center;
+    border-bottom: 2px solid #b5b5b5;
+    padding: 20px;
+}
+
+.img_card{
+    width: 80px;
+}
+
+.tito_card{
+    font-size: 22px;
+}
+
+.valor_card{
+    font-size: 20px;
+}
+
+#quant{
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#card-total{
+    text-align:right;
+    font-size:22px;
+    font-weight:bold;
+}
+
+#btn-remov{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    border:2px solid;
+    background:white;
+    cursor:pointer;
+}
+
+#btn-remov:hover{
+    color: #b5b5b5;
+}
+
+
+/* ===========================
+   LATERAL
+=========================== */
+
+#compra-cep-cont{
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-left:30px;
 }
 
 .valor-card{
-    padding: 29px;
+    background:white;
+    border:2px solid #000000;
+    border-radius:8px;
+    padding:18px;
+}
+
+.valor-card label{
+    display:block;
+    background:var(--cor_suave);
+    text-align:center;
+    padding:10px;
+    margin-bottom:12px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+#cep{
+    width:100%;
+    height:40px;
+    padding-left:10px;
+}
+
+#valor-total, #valor-frete, #total-pagar{
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    font-size:1em;
+    font-weight:bold;
 }
 
 .btn-val{
-    height: 30px;
-    width: 140px;
-    padding: 5px;
-    margin: 5px;
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    color:#000000;
+    cursor:pointer;
+}
+
+.btn-val:hover{
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+#btn-cont{
+    background:var(--cor_botao01);
+}
+
+.btn-val:last-child{
+    background:var(--cor_card);
+}
+
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+#rodape{
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor_principal);
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+#dadosloja{
+    font-size: 0.8em;
+    display: inline;
+}
+
+#icones-sociais ul{
+    list-style: none;
+}
+
+#icones-sociais img{
+    width: 25px;
+    height: 25px;
+    margin-left: 50px;
+}
+
+#div-cartoes img{
+    width: 50px;
+    height: 50px;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:1000px){
+
+#geral{
+    width:100%;
+}
+
+.sections{
+    flex-direction:column;
+}
+
+#cards-compra,
+#compra-cep-cont{
+    width:100%;
+}
+
+#card-compra{
+    grid-template-columns:80px 1fr;
+    gap:15px;
+}
+
 }
