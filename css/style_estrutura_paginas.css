@@ -145,9 +145,12 @@
     transform: translateY(-5px);
 }
 
-#button:hover{
+.btn_card:hover{
+    background-color: var(--cor_principal);
     color: var(--cor_botao01);
-    transform: translateY(-5px);
+    border-color: var(--cor_botao01);
+    
+    transform: translateY(-10px);
 }
 
 .card h2{
