@@ -149,8 +149,7 @@
     background-color: var(--cor_principal);
     color: var(--cor_botao01);
     border-color: var(--cor_botao01);
-    
-    transform: translateY(-10px);
+    transform: translateY(-3px);
 }
 
 .card h2{
@@ -164,13 +163,13 @@
 }
 
 .card button{
+    border-radius: 10px;
     width: 100%;
     height: 45px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    border: none;
     background-color: var(--cor_suave);
-    color: #d4cb4c;
+    color: var(--cor_principal);
     cursor: pointer;
 }
 
