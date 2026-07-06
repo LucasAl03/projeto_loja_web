@@ -3,7 +3,7 @@
 #quemsomos, .titulo{
     font-size: 1.3em;
     height: 50px;
-    width: 100%;
+    width: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 #texto{
-    
+    width: 900px;
     margin-bottom: 10px;
     font-size: 1em;
     padding: 10px;
