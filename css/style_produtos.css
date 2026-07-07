@@ -1,0 +1,7 @@
+@import url(style_estrutura_paginas.css);
+
+.card img{
+    width: 200px;
+    height: 190px;
+    padding-bottom: 30px;
+}
