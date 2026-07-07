@@ -168,6 +168,7 @@
     height: 45px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    border-color: var(--cor_principal);
     background-color: var(--cor_suave);
     color: var(--cor_principal);
     cursor: pointer;
