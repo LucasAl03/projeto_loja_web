@@ -43,7 +43,7 @@ label{
 }
 
 #div-btns button{
-    width: 200px;
+    width: 150px;
     height: 40px;
     margin-left: 10px 0px;
     background-color: var(--cor_suave);
@@ -52,6 +52,13 @@ label{
     cursor: pointer;
     font-size: 0.8em;
     letter-spacing: 5px;
+    border-radius: 8px;
+}
+
+#div-btns button:hover{
+    transform: translateY(-1px);
+    background-color: var(--cor_principal);
+    color: var(--cor_suave);
 }
 
 .oculto{
