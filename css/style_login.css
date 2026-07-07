@@ -1,0 +1,40 @@
+@import url(style_estrutura_paginas.css);
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    margin: 30px;   
+    background-color: var(--cor_principal);
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+
+
+#login_form label, input{
+    margin: 10px;
+    width: 300px;
+    height: 25px;
+    border-radius: 8px;
+    border-color: var(--cor_principal);
+}
+
+#login_form button:hover{
+    transform: translateY(-2px);
+    color: var(--cor_botao01);
+    cursor: pointer;
+    background-color: var(--cor_principal);
+}
+
+#login_form button{
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+    border-color: var(--cor_botao01);
+    background-color: var(--cor_botao01);
+    color: var(--cor_principal);
+    border-radius: 8px;
+}
