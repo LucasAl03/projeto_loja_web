@@ -131,8 +131,8 @@
 }
 
 .card{
-    width: 250px;
-    min-height: 250px;
+    width: 90%;
+    min-height: 25%;
     border: solid 1px var(--cor_botao01);
     padding: 15px;
     display: flex;
