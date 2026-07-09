@@ -66,13 +66,15 @@ const montarSecoes = () => {
 
 montarSecoes()
 
-//FILTRNADO PRODUTOS
+//FILTRANDO PRODUTOS 
 const produtosFiltrados = (idSecao) => {
     return produtos.filter(elem => elem.id_secao === idSecao)
 }
 
 //MONTANDO CARDS
 const montandoCards = (objProdutos) => {
+    section_cards.innerHTML = ''
+
     objProdutos.forEach((elem, i) => {
         const divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
