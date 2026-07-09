@@ -211,12 +211,13 @@
 }
 
 /*CONFIGURANDO O MENU SEÇÕES*/
-#nav-secoes{
+#nav-secoes, ul{
     width: auto;
-    height: auto;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 #nav-secoes, li{
