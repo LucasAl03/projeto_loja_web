@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Roboto;
+    font-family: roboto;
 }
 
 /* Criando variaveis */
@@ -34,10 +34,10 @@
     width: 100%;
     height: 200px;
     background-color: var(--cor_principal);
-    padding: 5px;
+    padding: 5px 100px;
     margin: 20px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -176,7 +176,7 @@
 
 .card img{
     width: auto;
-    height: auto;
+    height: 200px;
     padding-bottom: 30px;
 }
 
@@ -208,4 +208,34 @@
 #div-cartoes img{
     width: 50px;
     height: 50px;
+}
+
+/*CONFIGURANDO O MENU SEÇÕES*/
+#nav-secoes{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-secoes, li{
+    list-style: none;
+}
+
+.lnk-secao:link, .lnk-secao:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:hover {
+    font-size: 1.5em;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:active {
+    color: var(--cor_principal);
 }
