@@ -37,3 +37,57 @@ const listarProdutos = ()=>{
 }
 
 listarProdutos()
+
+//Filtrando as seções ocm a coleção map
+const listarSecoes = () => {
+    //Criando a coleção Map
+
+    const secoesFiltrada = new Map()
+
+    //Percorrendo o array produtos e filtrando as seções
+    produtos.forEach((elem, i)=>{
+        //criando a chave e o valor da coleção map a partir do id seção da lista de produtos
+        secoesFiltrada.set(elem.id_secao, elem)
+    })
+
+    //Convertendo o Map em array
+    const secoesMenu = Array.from(secoesFiltrada.values())
+
+    //Retornando o array convertido
+    return secoesMenu
+}
+
+//montando os Links seções
+const montarSecoes = ()=>{
+    //pegando elementos do dom
+    const ulMenu = document.querySelector('#menu-secoes')
+
+    //Limpando o Elemento ulMenu
+    ulMenu.innerHTML = ''
+
+    //Percorrendo o array das seções filtradas
+    listarSecoes().forEach((elem, i) => {
+        //Criando o elemento li
+        const liSecao = document.querySelector('li')
+
+        //Criando o elemento a
+        const aSecao = document.createElement('a')
+        aSecao.setAttribute('href','#')
+        aSecao.setAttribute('class', 'lnk-secao')
+        aSecao.innerHTML = elem.secoesFiltrada
+        
+        //Capturando o click dos links
+        aSecao.addEventListener('click',()=>{
+            //para teste
+            console.log(elem.id_secao)
+        })
+
+        //adicionando o elemento filho a no elemento li
+        liSecao.appendChild(aSecao)
+
+        //adicionando o elemento filho li no elemento do DOM url
+        ulMenu.appendChild(aSecao)
+    })
+}
+
+montarSecoes()
