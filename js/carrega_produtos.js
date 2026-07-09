@@ -86,7 +86,7 @@ const montarSecoes = ()=>{
         liSecao.appendChild(aSecao)
 
         //adicionando o elemento filho li no elemento do DOM url
-        ulMenu.appendChild(aSecao)
+        ulMenu.appendChild(liSecao)
     })
 }
 
