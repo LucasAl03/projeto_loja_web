@@ -1,27 +1,28 @@
-import {produtos} from "./produtos.js";
+//IMPORTANDO O ARRAY DOS PRODUTOS
+import { produtos } from "./produtos.js";
 
-//Pegando elementos do DOM
+//PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards')
 
-//Função para carregar os produtos
-const listarProdutos = ()=>{
+//FUNÇÃO PARA CARREGAR OS PRODUTOS
+const listarProdutos = () => {
     section_cards.innerHTML = ''
 
-    produtos.forEach((elem, i)=>{
+    produtos.forEach((elem, i) => {
         const divCard = document.createElement('div')
         divCard.setAttribute('class', 'card')
 
-        const imgProduto = document.createElemnt('img')
+        const imgProduto = document.createElement('img')
         imgProduto.setAttribute('src', elem.caminho_da_imagem)
         imgProduto.setAttribute('alt', elem.descricao_produto)
-        imgProduto.section_cards('class', 'img_card')
+        imgProduto.setAttribute('class', 'img_card')
 
-        const h2Titulo = document.createElemnt('h2')
+        const h2Titulo = document.createElement('h2')
         h2Titulo.innerHTML = elem.descricao_produto
 
         const h3Valor = document.createElement('h3')
         h3Valor.setAttribute('class', 'valor_card')
-        h3Valor.innerHTML `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}`
+        h3Valor.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.', ',')}`
 
         const btnCard = document.createElement('button')
         btnCard.setAttribute('class', 'btn_card')
@@ -33,61 +34,64 @@ const listarProdutos = ()=>{
         divCard.appendChild(btnCard)
 
         section_cards.appendChild(divCard)
-    });
+
+    })
+
+
 }
 
 listarProdutos()
 
-//Filtrando as seções ocm a coleção map
+//FILTRANDO AS SEÇÕES COM A COLEÇÃO map
 const listarSecoes = () => {
-    //Criando a coleção Map
-
+    //CRIANDO A COLEÇÃO MAP
     const secoesFiltrada = new Map()
 
-    //Percorrendo o array produtos e filtrando as seções
-    produtos.forEach((elem, i)=>{
-        //criando a chave e o valor da coleção map a partir do id seção da lista de produtos
+    //PECORRENDO O ARRAY PRODUTOS E FILTRANDO AS SEÇÕES
+    produtos.forEach((elem, i) => {
+        //CRIANDO A CHAVE E O VALOR DA COLEÇÃO MAP A PARTIR DO ID DA SEÇÃO DA LISTA DE PRODUTOS
         secoesFiltrada.set(elem.id_secao, elem)
     })
 
-    //Convertendo o Map em array
+    //CONVERTENDO O MAP EM ARRAY
     const secoesMenu = Array.from(secoesFiltrada.values())
 
-    //Retornando o array convertido
+    //RETORNADO O ARRAY CONVERTIDO
     return secoesMenu
+
 }
 
-//montando os Links seções
-const montarSecoes = ()=>{
-    //pegando elementos do dom
+//MONTANDO OS LINKS SEÇÕES
+const montarSecoes = () => {
+    //PEGANDO O ELEMENTO DO DOM
     const ulMenu = document.querySelector('#menu-secoes')
-
-    //Limpando o Elemento ulMenu
+    //LIMPANDO O ELEMENTO ulMenu
     ulMenu.innerHTML = ''
 
-    //Percorrendo o array das seções filtradas
+    //PERCORRENDO O ARRAY DAS SEÇÕES FILTRADA
     listarSecoes().forEach((elem, i) => {
-        //Criando o elemento li
-        const liSecao = document.querySelector('li')
+        //CRIANDO O ELEMENTO li
+        const liSecao = document.createElement('li')
 
-        //Criando o elemento a
+        //CRIANDO O ELEMENTO a
         const aSecao = document.createElement('a')
-        aSecao.setAttribute('href','#')
+        aSecao.setAttribute('href', '#')
         aSecao.setAttribute('class', 'lnk-secao')
-        aSecao.innerHTML = elem.secoesFiltrada
-        
-        //Capturando o click dos links
-        aSecao.addEventListener('click',()=>{
-            //para teste
+        aSecao.innerHTML = elem.nome_secao
+
+        //CAPTURANDO O CLICK DOS LINKS
+        aSecao.addEventListener('click', () => {
+            //PARA TESTE 
             console.log(elem.id_secao)
         })
 
-        //adicionando o elemento filho a no elemento li
+        //ADICIONANDO O ELEMENTO FILHO a NO ELEMENTO li
         liSecao.appendChild(aSecao)
 
-        //adicionando o elemento filho li no elemento do DOM url
+        //ADICIONANDO O ELEMENTO FILHO li NO ELEMENTO DO DOM ul
         ulMenu.appendChild(liSecao)
     })
+
 }
 
 montarSecoes()
