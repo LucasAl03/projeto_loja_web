@@ -8,6 +8,7 @@ const section_cards = document.querySelector('#cards')
 const listarProdutos = () => {
     section_cards.innerHTML = ''
 
+
 }
 
 listarProdutos()
@@ -51,9 +52,10 @@ const montarSecoes = () => {
 
         //CAPTURANDO O CLICK DOS LINKS
         aSecao.addEventListener('click', () => {
-            //PARA TESTE 
+            //CHAMANDO A FUNÇÃO PRODUTOS FILTRADOS
             montandoCards(produtosFiltrados(elem.id_secao))
         })
+
 
         //ADICIONANDO O ELEMENTO FILHO a NO ELEMENTO li
         liSecao.appendChild(aSecao)
