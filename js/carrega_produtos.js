@@ -3,6 +3,21 @@ import { produtos } from "./produtos.js";
 
 //PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards')
+const searchInput = document.querySelector('#pesquisa')
+
+searchInput.addEventListener('input', (event) => {
+    const value = formaString(event.target.value);
+    const cards = document.querySelectorAll('#cards .card');
+
+    cards.forEach(card => {
+        const bate = formaString(card.textContent).indexOf(value) !== -1;
+        card.style.display = bate ? 'flex' : 'none';
+    });
+});
+
+function formaString(value) {
+    return value.toLowerCase().trim();
+}
 
 //CARREGA 
 const carregaProduto = (id_secao) => {
@@ -50,6 +65,7 @@ const montarSecoes = () => {
     //CRIANDO O LINK TODO
     //CRIANDO O ELEMENTO li
     const liSecao = document.createElement('li')
+    liSecao.setAttribute('class', 'right left')
 
     //CRIANDO O ELEMENTO a
     const aSecao = document.createElement('a')
@@ -72,6 +88,7 @@ const montarSecoes = () => {
     listarSecoes().forEach((elem, i) => {
         //CRIANDO O ELEMENTO li
         const liSecao = document.createElement('li')
+        liSecao.setAttribute('class', 'right')
 
         //CRIANDO O ELEMENTO a
         const aSecao = document.createElement('a')
@@ -90,6 +107,8 @@ const montarSecoes = () => {
 
         //ADICIONANDO O ELEMENTO FILHO li NO ELEMENTO DO DOM ul
         ulMenu.appendChild(liSecao)
+
+        
     })
 
 }
@@ -134,3 +153,4 @@ const montandoCards = (objProdutos) => {
 }
 
 carregaProduto(0)
+
