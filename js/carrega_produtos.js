@@ -3,16 +3,6 @@ import { produtos } from "./produtos.js";
 
 //PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards')
-const searchInput = document.querySelector('#pesquisa')
-
-//Capturando evento do input pesquisa
-searchInput.addEventListener('input', (evt)=>{
-    //Capturando o texto do input e o deixando em minusculo na variavel txtInput
-    let txtInput = evt.target.value.toLowerCase()
-
-    //Filtra os dados montando cards pelo filter e includes
-    montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
-})
 
 //CARREGA 
 const carregaProduto = (id_secao) => {
@@ -102,11 +92,28 @@ const montarSecoes = () => {
 
         //ADICIONANDO O ELEMENTO FILHO li NO ELEMENTO DO DOM ul
         ulMenu.appendChild(liSecao)
-
-        
     })
 
 }
+
+//FILTRANDO PRODUTOS 
+const produtosFiltrados = (idSecao) => {
+    return produtos.filter(elem => elem.id_secao === idSecao)
+}
+
+//FILTRANDO PELO INPUT
+//PEGANDO O INPUT NO DOM
+const inputPesquisa = document.querySelector("#pesquisa")
+
+//CAPTURANDO O EVENTO input
+inputPesquisa.addEventListener('input', (evt) => {
+    //CAPTURANDO O TEXTO DO INPUT E O DEIXANDO-O EM MINÚSCULO NA VARIÁVEL txtInput
+    let txtInput = evt.target.value.toLowerCase()
+
+    //FILTRA OS DADOS MONTANDO OS CARDS PELO FILTER E INCLUDES
+    montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+
+})
 
 //MONTANDO CARDS
 const montandoCards = (objProdutos) => {
@@ -143,4 +150,3 @@ const montandoCards = (objProdutos) => {
 }
 
 carregaProduto(0)
-
