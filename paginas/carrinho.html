@@ -41,63 +41,25 @@
             </div>
         </header>
 
-        <div id="carrinho">
+        <div id="carrinho-titulo">
             <h2 class="titulo">Carrinho de Compras</h2>
         </div>
-            
-        
 
-            <section class="sections-coluna">
-                <section id="cards-compra" class="sections">
-                    <div id="card-compra">
-                    <img src="../imagens/b580.png" alt="Intel B580" class="img_card">
+            <section class="carrinho">
+                <section id="itens-carrinho">
+                    <div class="item">
+                    <img src="../imagens/b580.png" alt="Intel B580" class="img-item">
         
-                        <h2 class="tito_card">Placa de Vídeo ASRock Intel Arc B580 Challenger 12G OC</h2>
+                        <p class="descricao">Placa de Vídeo ASRock Intel Arc B580 Challenger 12G OC</p>
         
-                        <h3 class="valor_card">
+                        <p class="vlr-unitario">
                             R$ 1.999.90
-                        </h3>
-                        <input type="text" id="quant" name="quant" placeholder="Quant">
+                        </p>
+                        <input type="number" id="quant01" name="quant01" class="input-item" value="1" placeholder="Quant">
         
-                        <div id="card-total">
-                            R$ 3.999,80
-                        </div>
+                        <p class="tot-item">R$ 3998,80</p>
         
-                        <button type="submit" id="btn-remov">X</button>
-                    </div>
-        
-                    <div id="card-compra">
-                        <img src="../imagens/b580.png" alt="Intel B580" class="img_card">
-            
-                            <h2 class="tito_card">Placa de Vídeo ASRock Intel Arc B580 Challenger 12G OC</h2>
-            
-                            <h3 class="valor_card">
-                                R$ 1.999.90
-                            </h3>
-                            <input type="text" id="quant" name="quant" placeholder="Quant">
-            
-                            <div id="card-total">
-                                R$ 1.999.90
-                            </div>
-            
-                            <button type="submit" id="btn-remov">X</button>
-                    </div>
-        
-                    <div id="card-compra">
-                        <img src="../imagens/b580.png" alt="Intel B580" class="img_card">
-            
-                            <h2 class="tito_card">Placa de Vídeo ASRock Intel Arc B580 Challenger 12G OC</h2>
-            
-                            <h3 class="valor_card">
-                                R$ 1.999.90
-                            </h3>
-                            <input type="text" id="quant" name="quant" placeholder="Quant">
-        
-                            <div id="card-total">
-                                R$ 3.999,80
-                            </div>
-            
-                            <button type="submit" id="btn-remov">X</button>
+                        <img src="../icones/remover.png" alt="" class="img-remover">
                     </div>
                 </section>
 
@@ -126,13 +88,9 @@
                     </div>
                 </div>
 
-                <button id="btn-cont" class="btn-val">Continuar Compra</button>
-                <button type="btn-fin" class="btn-val">Finalizar Compra</button>
+                <button type="button" id="btn-cont" class="btn-val">Continuar Compra</button>
+                <button type="button" id="btn-fin" class="btn-val">Finalizar Compra</button>
                 </section>
-
-                
-
-                
             </section>
 
         <footer id="rodape">
