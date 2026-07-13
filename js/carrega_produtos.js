@@ -139,6 +139,10 @@ const montandoCards = (objProdutos) => {
         btnCard.setAttribute('class', 'btn_card')
         btnCard.innerHTML = 'Adicionar'
 
+        btnCard.addEventListener('click', ()=>{
+            window.location.href = "/paginas/carrinho.html"
+        })
+
         divCard.appendChild(imgProduto)
         divCard.appendChild(h2Titulo)
         divCard.appendChild(h3Valor)
