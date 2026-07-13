@@ -5,19 +5,14 @@ import { produtos } from "./produtos.js";
 const section_cards = document.querySelector('#cards')
 const searchInput = document.querySelector('#pesquisa')
 
-searchInput.addEventListener('input', (event) => {
-    const value = formaString(event.target.value);
-    const cards = document.querySelectorAll('#cards .card');
+//Capturando evento do input pesquisa
+searchInput.addEventListener('input', (evt)=>{
+    //Capturando o texto do input e o deixando em minusculo na variavel txtInput
+    let txtInput = evt.target.value.toLowerCase()
 
-    cards.forEach(card => {
-        const bate = formaString(card.textContent).indexOf(value) !== -1;
-        card.style.display = bate ? 'flex' : 'none';
-    });
-});
-
-function formaString(value) {
-    return value.toLowerCase().trim();
-}
+    //Filtra os dados montando cards pelo filter e includes
+    montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+})
 
 //CARREGA 
 const carregaProduto = (id_secao) => {
@@ -111,11 +106,6 @@ const montarSecoes = () => {
         
     })
 
-}
-
-//FILTRANDO PRODUTOS 
-const produtosFiltrados = (idSecao) => {
-    return produtos.filter(elem => elem.id_secao === idSecao)
 }
 
 //MONTANDO CARDS
