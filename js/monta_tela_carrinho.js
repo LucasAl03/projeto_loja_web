@@ -12,7 +12,7 @@ const montaTelaCarrinho = () => {
         <p class='descricao'>${elem.descricao_produto}</p> 
         <p class='vlr-unitario'>R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}</p> 
         <input type='number' name='quant${i}' id='quant${i}' class="input-item" value=${1} 
-        <p class='tot-item'>R$ ${parseFloat(elem.valor_unitario * 1).toFixed(2).replace('.',',')}</p>
+        <p class="tot-item">R$ ${parseFloat(elem.valor_unitario * 1).toFixed(2).replace('.',',')}</p>
         <img src="../icones/remover.png" alt="" class="img-remover" >`
 
         sectionItensCarrinho.appendChild(sectionItem)
