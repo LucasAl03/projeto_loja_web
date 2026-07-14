@@ -1,7 +1,6 @@
 //IMPORTANDO O ARRAY DOS PRODUTOS
 import { produtos } from "./produtos.js";
-
-//IMPORTANDO A ARROW FUNCTION addItem
+//IMPORTANDO O A ARROW FUNCTION addItem
 import { addItem } from "./carrinho.js";
 
 //PEGANDO ELEMENTO DO DOM
@@ -142,11 +141,11 @@ const montandoCards = (objProdutos) => {
         btnCard.setAttribute('class', 'btn_card')
         btnCard.innerHTML = 'Adicionar'
 
-        btnCard.addEventListener('click', ()=>{
+        btnCard.addEventListener('click', () => {
             //ADICIONANDO UM OBJETO NO CARRINHO
             addItem(elem)
-
-            //REDIRECIONAD PARA A PAGINA carrinho.html
+            
+            //REDIRECIONADO PARA A PAGINA carrinho.html
             window.location.href = "/paginas/carrinho.html"
         })
 
