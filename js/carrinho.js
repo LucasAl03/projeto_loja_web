@@ -5,12 +5,15 @@ const itensCarrinho = JSON.parse(localStorage.getItem('sessaoItens')) || []
 const addItem = (objItem) => {
     itensCarrinho.push(objItem)
 
-    localStorage.setItem('itensSessao', itensCarrinho)
+    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+
+    montaTelaCarrinho()
 }
 
 //LISTA ITENS DO CARRINHO
 const listItens = () => {
-    const itensSelecionados = JSON.stringify(localStorage.getItem('itensSessao'))
+
+    const itensSelecionados = JSON.parse(localStorage.getItem('itensSessao')) || []
 
     return itensCarrinho
 }
