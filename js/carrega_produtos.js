@@ -1,6 +1,9 @@
 //IMPORTANDO O ARRAY DOS PRODUTOS
 import { produtos } from "./produtos.js";
 
+//IMPORTANDO A ARROW FUNCTION addTime
+import { addTime } from "./carrinho.js";
+
 //PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards')
 
