@@ -21,7 +21,7 @@
 }
 
 #itens-carrinho{
-    width: 700px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -44,11 +44,13 @@
 }
 
 .vlr-unitario{
+    margin-left: 10px;
     font-size: 20px;
 }
 
 .input-item{
-    width: 60px;
+    margin-left: 10px;
+    width: 50px;
     height: 35px;
     text-align: center;
     font-size: 18px;
@@ -71,7 +73,7 @@
 /* compra valores */
 
 #compra-cep-cont{
-    width:30%;
+    width: 300px;
     display:flex;
     flex-direction:column;
     gap:20px;
