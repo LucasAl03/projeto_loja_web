@@ -2,9 +2,10 @@
 //localStorage.clear()
 
 //CRIANDO O ARRAY DE ITENS DO CARRINHO
-const itensCarrinho = JSON.parse(localStorage.getItem('ittensSessao')) || []
+const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
 
-//const itensCarrinho = JSON.parse(sessionStorage.getItem('ittensSessao')) || []
+//const itensCarrinho = JSON.parse(sessionStorage.getItem('itensSessao')) || []
+
 
 //FUNÇÃO PARA ADICIONAR O ITEM ARRAY
 const addItem = (objItem) => {
