@@ -6,10 +6,23 @@ const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
 
 //const itensCarrinho = JSON.parse(sessionStorage.getItem('itensSessao')) || []
 
+//CRIANDO ARROW ITEM
+const fobjItem = (objProduto) => {
+    const item = {
+    id_produto: objProduto.id_produto,
+    descricao_produto: objProduto.descricao_produto,
+    caminho_da_imagem: objProduto.caminho_da_imagem,
+    valor_unitario: objProduto.valor_unitario,
+    quantidade: 1
+    }
+
+    return item
+} 
+
 
 //FUNÇÃO PARA ADICIONAR O ITEM ARRAY
 const addItem = (objItem) => {
-    itensCarrinho.push(objItem)
+    itensCarrinho.push(fobjItem(objItem))
 
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
     //sessionStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
