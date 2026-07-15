@@ -1,9 +1,12 @@
 import { listItens } from "./carrinho.js"
+import { removeItem } from "./carrinho.js";
 
 //MONTANDO A TELA CARRINHO 
 const montaTelaCarrinho = () => {
     //PEGANDO ELEMENTOS DO DOM
     const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+
+    sectionItensCarrinho.innerHTML = ''
 
     listItens().forEach((elem, i) => {
         const sectionItem = document.createElement('section')
@@ -12,11 +15,29 @@ const montaTelaCarrinho = () => {
         <p class='descricao'>${elem.descricao_produto}</p> 
         <p class='vlr-unitario'>R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}</p> 
         <input type='number' name='quant${i}' id='quant${i}' class="input-item" value=${1} 
-        <p class="tot-item">R$ ${parseFloat(elem.valor_unitario * 1).toFixed(2).replace('.',',')}</p>
-        <img src="../icones/remover.png" alt="" class="img-remover" >`
+        <p class="tot-item">R$ ${parseFloat(elem.valor_unitario * 1).toFixed(2).replace('.',',')}</p>`
+
+        const imgRemover = document.createElement('img')
+        imgRemover.setAttribute('src', '../icones/remover.png')
+        imgRemover.setAttribute('alt', 'Remover')
+        imgRemover.setAttribute('class', 'img-remover')
+
+        imgRemover.addEventListener('click',()=>{
+            if(confirm(`Deseja remover ${elem.descricao_produto} da sua lista? `)){
+                removerItemCarrinho(i)
+            }
+        })
+
+        sectionItem.appendChild(imgRemover)
 
         sectionItensCarrinho.appendChild(sectionItem)
     });
+}
+
+const removerItemCarrinho = (pos)=>{
+    removeItem(pos)
+
+    montaTelaCarrinho()
 }
 
 montaTelaCarrinho()
