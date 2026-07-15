@@ -72,7 +72,7 @@
 
 /* compra valores */
 
-#compra-cep-cont{
+.compra{
     width: 300px;
     display:flex;
     flex-direction:column;
@@ -103,7 +103,7 @@
     padding-left:10px;
 }
 
-#valor-total, #valor-frete, #total-pagar{
+.valor-total, .valor-frete, .total-pagar{
     height:40px;
     display:flex;
     align-items:center;
