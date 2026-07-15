@@ -19,6 +19,8 @@ const fobjItem = (objProduto) => {
     return item
 } 
 
+//PEGANDO O INDICE DO ARRAY
+console.log(itensCarrinho.findIndex(elem => elem.id_produto == 10))
 
 //FUNÇÃO PARA ADICIONAR O ITEM ARRAY
 const addItem = (objItem) => {
