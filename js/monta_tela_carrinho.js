@@ -11,10 +11,10 @@ const montaTelaCarrinho = () => {
     listItens().forEach((elem, i) => {
         const sectionItem = document.createElement('section')
         sectionItem.setAttribute('class', 'item')
-        sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt=${elem.descricao_produto} class='img-item'/> 
+        sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt='${elem.descricao_produto}' class='img-item'> 
         <p class='descricao'>${elem.descricao_produto}</p> 
         <p class='vlr-unitario'>R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}</p> 
-        <input type='number' name='quant${i}' id='quant${i}' class="input-item" value=${elem.quantidade} 
+        <input type='number' name='quant${i}' id='quant${i}' class="input-item" id="input-item" value=${elem.quantidade}>
         <p class="tot-item">R$ ${parseFloat(elem.valor_unitario * elem.quantidade).toFixed(2).replace('.',',')}</p>`
 
         const imgRemover = document.createElement('img')
@@ -27,6 +27,9 @@ const montaTelaCarrinho = () => {
                 removerItemCarrinho(i)
             }
         })
+
+        const quantItem = document.querySelector('#input-item')
+        
 
         sectionItem.appendChild(imgRemover)
 
