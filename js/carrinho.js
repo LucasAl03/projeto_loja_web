@@ -13,14 +13,16 @@ const fobjItem = (objProduto) => {
     descricao_produto: objProduto.descricao_produto,
     caminho_da_imagem: objProduto.caminho_da_imagem,
     valor_unitario: objProduto.valor_unitario,
-    quantidade: 1
+    quantidade: 2
     }
 
     return item
 } 
 
 //PEGANDO O INDICE DO ARRAY
-console.log(itensCarrinho.findIndex(elem => elem.id_produto == 10))
+//console.log(itensCarrinho.findIndex(elem => elem.id_produto === elem.id_produto))
+
+//itensCarrinho.findIndex(elem => elem.id_produto === elem.id_produto)
 
 //FUNÇÃO PARA ADICIONAR O ITEM ARRAY
 const addItem = (objItem) => {
