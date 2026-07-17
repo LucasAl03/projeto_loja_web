@@ -25,6 +25,7 @@ const fobjItem = (objProduto) => {
 //itensCarrinho.findIndex(elem => elem.id_produto === elem.id_produto)
 
 //FUNÇÃO PARA ADICIONAR O ITEM ARRAY
+//objItem - item adicionando ao itensCarrinho
 const addItem = (objItem) => {
     //PROCURA SE O ITEM JA EXITE NO CARRINHO
     const index = itensCarrinho.findIndex(elem => elem.id_produto === objItem.id_produto)
