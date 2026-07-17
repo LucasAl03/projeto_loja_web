@@ -196,4 +196,4 @@
     .input-item{ grid-area: input-item; justify-self: start; }
     .tot-item{ grid-area: tot-item; text-align: left; }
     .img-remover{ grid-area: img-remover; justify-self: end; }
-}
+}}
