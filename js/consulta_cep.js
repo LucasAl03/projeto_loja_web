@@ -17,14 +17,14 @@ inputCep.addEventListener('change',(evt)=>{
 })
 
 //BUSCAR OS DADOS DO CEPS
-const buscandoDadosCep = (cep) =>{
+const buscandoDadosCep = async (cep) =>{
     //TENTA BUSCAR OS DADOS NO VIACEP
     try{
         //BUSCA OS DADOS NO VIACEP
-        const response = fetch(`https://viacep.com.br/ws/${cep}}/json/`)
+        const response = await fetch(`https://viacep.com.br/ws/${cep}}/json/`)
 
         //CONVERTE OS DADOS NO FORMATO json
-        const dadosEndereco = response.json()
+        const dadosEndereco = await response.json()
 
         //CHAMA A FUNÇÃO exibeDados
         exibeDados(dadosEndereco)
