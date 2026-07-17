@@ -5,17 +5,21 @@ const montaTelaCarrinho = () => {
     //PEGANDO ELEMENTOS DO DOM
     const sectionItensCarrinho = document.querySelector('#itens-carrinho')
     const valorTot = document.querySelector('.valor-total')
-    const valorFrete = document.querySelector('.valor-frete')
     const valorCard = document.querySelector('.valor-card')
-
-    valorTot.innerHTML = `R$ `
-    valorFrete.innerHTML = `R$ `
-    valorCard.innerHTML = `R$ `
     
 
     sectionItensCarrinho.innerHTML = ''
 
+    //ACUMULADOR PARA O VALOR TOTAL
+    let acum = 0
+
     listItens().forEach((elem, i) => {
+
+        //VARIAVEL PARA O VALOR TOTAL DOS ITENS
+        const totalItens = elem.valor_unitario * elem.quantidade
+        //INCREMENTO DO ACUMULADOR
+        acum += totalItens
+
         const sectionItem = document.createElement('section')
         sectionItem.setAttribute('class', 'item')
         sectionItem.innerHTML = `<img src='${elem.caminho_da_imagem}' alt='${elem.descricao_produto}' class='img-item'> 
@@ -62,6 +66,9 @@ const montaTelaCarrinho = () => {
 
         sectionItensCarrinho.appendChild(sectionItem)
     });
+
+    //DECLARA NO HTML O VALOR TOTAL CALCULADO
+    valorTot.innerHTML = `R$ ${acum.toFixed(2).replace('.',',')}`
 }
 
 const removerItemCarrinho = (pos)=>{
