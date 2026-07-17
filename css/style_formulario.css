@@ -55,6 +55,14 @@ label{
     border-radius: 8px;
 }
 
+#btn-add:hover{
+    transform: translateY(-3px);
+}
+
+#btn-add{
+    margin: 20px;
+}
+
 #div-btns button:hover{
     transform: translateY(-1px);
     background-color: var(--cor_principal);

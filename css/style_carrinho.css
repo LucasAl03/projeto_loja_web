@@ -11,17 +11,21 @@
     background-color: var(--cor_suave);
     border: 1px;
     border-radius: 8px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 /*foramatação dos cards nos carrinhos*/
 
 .carrinho{
+    width: 100%;
     display: flex;
-}
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
 
 #itens-carrinho{
-    width: 70%;
+    flex: 2 1 500px; /* cresce, encolhe, base de 500px */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -29,43 +33,44 @@
 
 .item{
     display: grid;
-    grid-template-columns: 100px 1fr 120px 90px 120px 50px;
+    grid-template-columns: 90px 1fr 120px 90px 120px 40px;
     align-items: center;
+    gap: 10px 15px;
     border-bottom: 2px solid #b5b5b5;
     padding: 20px;
 }
 
 .img-item{
-    width: 80px;
+    width: 100%;
+    max-width: 80px;
+    height: auto;
 }
 
 .descricao{
-    font-size: 22px;
+    font-size: 1.2em;
 }
 
 .vlr-unitario{
-    margin-left: 10px;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .input-item{
-    margin-left: 1px;
-    width: 50px;
+    width: 100%;
+    max-width: 60px;
     height: 35px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 .tot-item{
-    text-align:right;
-    font-size:18px;
-    margin-right: 5px;
+    text-align: right;
+    font-size: 1.1em;
 }
-
+ 
 .img-remover{
     width: 25px;
     height: 25px;
-    text-align: center;
+    justify-self: center;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -73,65 +78,72 @@
 /* compra valores */
 
 .compra{
-    width: 500px;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    padding-left:50px;
+    flex: 1 1 320px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-
+ 
 .valor-card{
-    background:white;
-    border:2px solid #000000;
-    border-radius:8px;
-    padding:18px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 18px;
 }
-
+ 
 .valor-card label{
-    display:block;
-    background:var(--cor_suave);
-    text-align:center;
-    padding:10px;
-    margin-bottom:12px;
-    border-radius:5px;
-    font-weight:bold;
+    display: block;
+    background: var(--cor_suave);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 #cep{
-    width:100%;
-    height:40px;
-    padding-left:200px;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1.2em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
+ 
 .valor-total, .valor-frete, .total-pagar{
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    font-size:1em;
-    font-weight:bold;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1em;
+    font-weight: bold;
 }
-
+ 
 .btn-val{
-    width:100%;
-    height:55px;
-    border:none;
-    border-radius:5px;
-    font-size:18px;
-    color:#000000;
-    cursor:pointer;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .btn-val:hover{
     transform: translateY(-3px);
-    color: #ffffff;
+    color: #fff;
 }
-
+ 
 #btn-cont{
-    background:var(--cor_botao01);
+    background: var(--cor_botao01);
 }
-
+ 
 #btn-fin{
+    background: var(--cor_card);
     margin-bottom: 5px;
 }
 
@@ -141,24 +153,47 @@
 
 /* RESPONSIVO */
 
-@media(max-width:1000px){
-
-#geral{
-    width:100%;
+/* Tablet: item ainda em linha, mas colunas mais enxutas */
+@media (max-width: 900px){
+    .item{
+        grid-template-columns: 80px 1fr 100px 70px 100px 35px;
+        padding: 15px 10px;
+    }
+ 
+    .descricao{
+        font-size: 1.05em;
+    }
 }
-
-.sections{
-    flex-direction:column;
-}
-
-#cards-compra,
-#compra-cep-cont{
-    width:100%;
-}
-
-#card-compra{
-    grid-template-columns:80px 1fr;
-    gap:15px;
-}
-
+ 
+/* Celular: empilha cada item em vez de usar 6 colunas */
+@media (max-width: 600px){
+    .carrinho{
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+    #itens-carrinho, .compra{
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+ 
+    .item{
+        grid-template-columns: 70px 1fr;
+        grid-template-areas:
+            "img-item descricao"
+            "img-item vlr-unitario"
+            "img-item input-item"
+            "img-item tot-item"
+            "img-remover img-remover";
+        row-gap: 8px;
+        padding: 15px;
+    }
+ 
+    .img-item{ grid-area: img-item; align-self: start; }
+    .descricao{ grid-area: descricao; }
+    .vlr-unitario{ grid-area: vlr-unitario; }
+    .input-item{ grid-area: input-item; justify-self: start; }
+    .tot-item{ grid-area: tot-item; text-align: left; }
+    .img-remover{ grid-area: img-remover; justify-self: end; }
 }

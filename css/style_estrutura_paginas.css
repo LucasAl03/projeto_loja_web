@@ -8,7 +8,7 @@
     box-sizing: border-box;
     font-family: roboto;
 }
-
+ 
 /* Criando variaveis */
 :root{
     --cor_principal: #dfd662;
@@ -18,7 +18,7 @@
     --cor_suave: #cc6f6f;
     --cor_card: #6f82db;
 }
-
+ 
 /* Configurando a tag main*/
 #geral{
     margin: 20px;
@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
 }
-
+ 
 /*Configurando o cabeçalho da pagina*/
 #cabecalho{
     width: 100%;
@@ -40,13 +40,13 @@
     justify-content: space-between;
     align-items: center;
 }
-
+ 
 /*Alterando o tamanho da imagem logo*/
 #logo img{
     width: 250px;
     height: 160px;
 }
-
+ 
 /*Configurando a tag nav por meio do seu id*/
 #menu{
     width: 750px;
@@ -55,20 +55,20 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 /*Configurando os li do ul do cabeçalho na horizontal*/
 #cabecalho ul{
     display: flex;
     list-style: none;
     gap: 30px;
 }
-
+ 
 /*Configurando os tamanhos dos icones*/
 #div-icones img{
     width: 60px;
     height: 60px;
 }
-
+ 
 /*Formatando os links dos menus*/
 #menu a:link{
     font-size: 1.3em;
@@ -76,28 +76,28 @@
     text-decoration: none;
     color: var(--cor_lnk_menu)
 }
-
+ 
 #menu a:visited{
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_lnk_menu);
 }
-
+ 
 #menu a:hover{
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_botao01)
 }
-
+ 
 #menu a:active{
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_vermelha)
 }
-
+ 
 /*formatando section pelo id pesquisa*/
 #pesquisa{
     width: 100%;
@@ -106,7 +106,7 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 #pesquisa input{
     width: 600px;
     height: 50px;
@@ -114,7 +114,7 @@
     border-radius: 8px;
     font-size: 2em;
 }
-
+ 
 /*Formatação dos cards*/
 #cards{
     background-color: var(--cor_principal);
@@ -122,14 +122,13 @@
     min-height: 60%;
     margin: 20px 0px;
     padding: 10px;
-    /*display: grid - trata os elementos como uma tabela*/
     display: grid;
-    /*como as colunas serão distribuidas*/
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+    justify-content: center;
     gap: 20px;
     cursor: pointer;
 }
-
+ 
 .card{
     width: 90%;
     min-height: 25%;
@@ -140,28 +139,28 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 .card:hover{
     transform: translateY(-5px);
 }
-
+ 
 .btn_card:hover{
     background-color: var(--cor_principal);
     color: var(--cor_botao01);
     border-color: var(--cor_botao01);
     transform: translateY(-3px);
 }
-
+ 
 .card h2{
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 10px 0px;
 }
-
+ 
 .card h3{
     margin: 20px 0px;
 }
-
+ 
 .card button{
     border-radius: 10px;
     width: 100%;
@@ -173,13 +172,13 @@
     color: var(--cor_principal);
     cursor: pointer;
 }
-
+ 
 .card img{
     width: auto;
     height: 200px;
     padding-bottom: 30px;
 }
-
+ 
 /*Formatação do Rodapé*/
 #rodape{
     width: 100%;
@@ -189,27 +188,27 @@
     align-items: center;
     justify-content: space-around;
 }
-
+ 
 #dadosloja{
     font-size: 0.8em;
     display: inline;
 }
-
+ 
 #icones-sociais ul{
     list-style: none;
 }
-
+ 
 #icones-sociais img{
     width: 25px;
     height: 25px;
     margin-left: 50px;
 }
-
+ 
 #div-cartoes img{
     width: 50px;
     height: 50px;
 }
-
+ 
 /*CONFIGURANDO O MENU SEÇÕES*/
 #nav-secoes, ul{
     width: auto;
@@ -218,11 +217,11 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 #nav-secoes, li{
     list-style: none;
 }
-
+ 
 .lnk-secao:link, .lnk-secao:visited{
     text-transform: uppercase;
     text-decoration: none;
@@ -230,22 +229,96 @@
     letter-spacing: 3px;
     color: var(--cor_vermelha);
 }
-
+ 
 .right{
     border-right: solid var(--cor_vermelha);
     padding: 20px;
 }
-
+ 
 .left{
     border-left: solid var(--cor_vermelha);
     padding: 20px;
 }
-
+ 
 .lnk-secao:hover {
     font-size: 1.5em;
     color: var(--cor_vermelha);
 }
-
+ 
 .lnk-secao:active {
     color: var(--cor_principal);
+}
+ 
+/* ===================== RESPONSIVO ===================== */
+ 
+/* Tablet */
+@media (max-width: 900px){
+    #cabecalho{
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+ 
+    #logo img{
+        width: 150px;
+        height: auto;
+    }
+ 
+    #menu{
+        width: 100%;
+        height: auto;
+    }
+ 
+    #cabecalho ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+ 
+    #pesquisa input{
+        width: 90%;
+        font-size: 1.3em;
+    }
+ 
+    #div-icones img{
+        width: 45px;
+        height: 45px;
+    }
+}
+ 
+/* Celular */
+@media (max-width: 600px){
+    #geral{
+        margin: 10px;
+        padding: 10px;
+    }
+ 
+    #logo img{
+        width: 120px;
+    }
+ 
+    #menu a:link,
+    #menu a:visited,
+    #menu a:hover,
+    #menu a:active{
+        font-size: 1em;
+    }
+ 
+    #rodape{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+ 
+    #icones-sociais img{
+        margin: 0 15px;
+    }
+ 
+    #div-cartoes img{
+        width: 40px;
+        height: 40px;
+    }
 }
