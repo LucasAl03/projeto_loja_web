@@ -1,7 +1,7 @@
  @import url(style_estrutura_paginas.css);
 
 #formulario{
-    width: 935px;
+    width: 100%;
     min-height: 600px;
     padding: 20px;
 }
